@@ -1,0 +1,31 @@
+1compare two objec;
+let ob1={name:"poovi",age:32};
+let ob2={age:35,name:"velu"};
+if(ob1===ob2)
+{
+console.log("this two object same");
+}
+else
+console.log("its not same");
+2.display country names in rest county API
+var request=new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v3.1/all");
+request.send();
+request.onload=function(){
+    var result=JSON.parse(request.response);
+for(let i=0;i<=result.length;i++)
+{
+    console.log(result[i].flag);
+}
+    }
+3.display country names,regions,sub rejion,population in rest county API
+var request=new XMLHttpRequest();
+request.open("GET","https://restcountries.com/v3.1/all");
+request.send();
+request.onload=function(){
+    var result=JSON.parse(request.response);
+for(let i=0;i<=result.length;i++)
+{
+    console.log(result[i].countryname,result[i].regions,result[i].sub-rejion,result[i].population);
+}
+    }
